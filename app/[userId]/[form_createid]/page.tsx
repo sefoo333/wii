@@ -331,7 +331,7 @@ function page({ params }: any) {
 
                                             className="block size-8 cursor-pointer rounded-full bg-gradient-to-r from-[#11998e] to-[#38ef7d] shadow-sm has-[:checked]:ring-2 has-[:checked]:ring-amber-500 has-[:checked]:ring-offset-2"
                                         >
-                                            <input type="radio" name="ColorOption" value="ColorGold" id="colorliGreen" className="sr-only" value="linear-gradient(40deg, #11998e, #38ef7d)"
+                                            <input type="radio" name="ColorOption"  id="colorliGreen" className="sr-only" value="linear-gradient(40deg, #11998e, #38ef7d)"
                                                 onClick={(e) => {
                                                     setColor(e.currentTarget.value)
                                                     changecolor()
