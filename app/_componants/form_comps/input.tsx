@@ -72,9 +72,8 @@ function Input_comp(props: any) {
         }
 
 
-        return () => {
             getDa()
-        }
+        
     }, [])
 
     return (
