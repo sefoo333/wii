@@ -65,9 +65,8 @@ function Text_comp(props: any) {
         }
 
 
-        return () => {
             getDa()
-        }
+        
     }, [])
 
 
