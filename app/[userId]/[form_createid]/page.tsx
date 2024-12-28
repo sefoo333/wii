@@ -95,8 +95,10 @@ function page({ params }: any) {
 
     document.body.style.background = color
         
-            questions();
-    
+return () => {
+            questions()
+
+}    
     }, [])
 
 
