@@ -28,6 +28,7 @@ export default function Home() {
   let [name, setName] = useState("");
 
   useEffect(() => {
+    document.body.style.overflowY = "hidden"
     const authy = onAuthStateChanged(auth, (user) => {
       if (user) {
         console.log("wow")
@@ -118,7 +119,6 @@ export default function Home() {
 
 
 
-  document.body.style.overflowY = "hidden"
 
 
 
