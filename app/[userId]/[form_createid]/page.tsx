@@ -99,7 +99,6 @@ return () => {
 
 }    
     }, [])
-    document.body.style.background = color
 
 
     // useEffect(() => {
@@ -252,6 +251,9 @@ return () => {
             </button>
         </>
     );
+
+    useEffect(() => {    document.body.style.background = color
+},[])
 
     return (
         <>
