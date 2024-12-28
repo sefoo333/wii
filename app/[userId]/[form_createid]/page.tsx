@@ -137,7 +137,7 @@ function page({ params }: any) {
         let datas: any = (await getDoc(doc(db, "form_solution", `${params.form_createid}`))).data();
         let datas2: any = (await getDoc(doc(db, "forms", `${params.form_createid}`))).data();
 
-        let questions = datas2.contentQuestion.map((e) => {
+        let questions = datas2.contentQuestion.map((e:any) => {
             return {
                 Namequestion: e.Title,
                 id: e.id,
@@ -173,17 +173,17 @@ function page({ params }: any) {
 
     console.log('tr', filterquestions)
     const filterquestions2 = filterquestions.map((e: any) => {
-        return e.filter((item, index, self) => {
+        return e.filter((item:any, index:any, self:any) => {
             if (item.type === "checkbox") {
-                return index === self.findLastIndex((t) => t.id === item.id)
+                return index === self.findLastIndex((t:any) => t.id === item.id)
             } else {
-                return index === self.findLastIndex((t) => t.id_Question === item.id_Question)
+                return index === self.findLastIndex((t:any) => t.id_Question === item.id_Question)
             }
         })
     })
 
     const solutions = filterquestions2.flat(Infinity)
-    const s2 = solutions.filter((e) => {
+    const s2 = solutions.filter((e:any) => {
         return e.kind === "que"
     })
     let [quantity, setQua] = useState(1)
@@ -462,7 +462,7 @@ function page({ params }: any) {
                                             <h1>Review</h1>
                                         </div>
                                         <div className="charts mt-[20px]">
-                                            {data.map((a) => (
+                                            {data.map((a:any) => (
                                                 <form>
 
                                                     {a.kind === "que" ? (
@@ -565,7 +565,7 @@ function page({ params }: any) {
 
                                                     <dd className="text-4xl font-extrabold text-blue-600 md:text-5xl">{filterquestions2[inde].map((e) => {
                                                         return e.kind === "que" ? e.points : 0
-                                                    }).reduce((a, b) => a + b, 0)}
+                                                    }).reduce((a:number, b:number) => a + b, 0)}
                                                     </dd>
                                                 </div>
                                             </dl>
