@@ -29,10 +29,10 @@ function Rate_pre_dis(props: { kind: string, id: string, name: string, isrequire
         const getDa = async () => {
             let questions: any = (await getDoc(doc(db, "forms", `${props.name}`))).data()
             let filter1 = questions.contentQuestion.filter((e: { id: string }) => e.id === props.id);
-            setCheck(filter1[0].isrequired)
-            setKind(filter1[0].rate_kind)
-            setCount(filter1[0].rate_count)
-            setValue2(filter1[0].Title)
+            setCheck(filter1[0]?.isrequired)
+            setKind(filter1[0]?.rate_kind)
+            setCount(filter1[0]?.rate_count)
+            setValue2(filter1[0]?.Title)
         }
 
         return () => {
@@ -54,7 +54,7 @@ function Rate_pre_dis(props: { kind: string, id: string, name: string, isrequire
                 <div className="stars">
                     {kind === "star" ? (
                         <div className="stars flex text-[40px] pl-[15px] my-[20px] cursor-pointer">
-                            {Array.from(Array(parseInt(props.solution)), (e, i) => (
+                            {Array.from(Array(props.on), (e, i) => (
                                 <div className="star" onClick={() => {
                                     console.log(i)
                                     setCo(i + 1)
@@ -72,11 +72,11 @@ function Rate_pre_dis(props: { kind: string, id: string, name: string, isrequire
                                     <FaStar color='rgb(245 158 11 / 1)' />
                                 </div>
                             ))}
-                           
+
                         </div>
                     ) : (
                         <div className="heart flex text-[40px] pl-[15px] my-[20px] cursor-pointer">
-                            {Array.from(Array(parseInt(props.solution)), (e, i) => (
+                            {Array.from(Array(props.on), (e, i) => (
                                 <CiHeart />
                             ))}
                         </div>
