@@ -136,7 +136,7 @@ function page({ params }: any) {
         let datas: any = (await getDoc(doc(db, "form_solution", `${params.form_createid}`))).data();
         let datas2: any = (await getDoc(doc(db, "forms", `${params.form_createid}`))).data();
 
-        let questions = datas2.contentQuestion.map((e:any) => {
+        let questions = datas2.contentQuestion.map((e: any) => {
             return {
                 Namequestion: e.Title,
                 id: e.id,
@@ -172,17 +172,17 @@ function page({ params }: any) {
 
     console.log('tr', filterquestions)
     const filterquestions2 = filterquestions.map((e: any) => {
-        return e.filter((item:any, index:any, self:any) => {
+        return e.filter((item: any, index: any, self: any) => {
             if (item.type === "checkbox") {
-                return index === self.findLastIndex((t:any) => t.id === item.id)
+                return index === self.findLastIndex((t: any) => t.id === item.id)
             } else {
-                return index === self.findLastIndex((t:any) => t.id_Question === item.id_Question)
+                return index === self.findLastIndex((t: any) => t.id_Question === item.id_Question)
             }
         })
     })
 
     const solutions = filterquestions2.flat(Infinity)
-    const s2 = solutions.filter((e:any) => {
+    const s2 = solutions.filter((e: any) => {
         return e.kind === "que"
     })
     let [quantity, setQua] = useState(1)
@@ -330,7 +330,7 @@ function page({ params }: any) {
 
                                             className="block size-8 cursor-pointer rounded-full bg-gradient-to-r from-[#11998e] to-[#38ef7d] shadow-sm has-[:checked]:ring-2 has-[:checked]:ring-amber-500 has-[:checked]:ring-offset-2"
                                         >
-                                            <input type="radio" name="ColorOption"  id="colorliGreen" className="sr-only" value="linear-gradient(40deg, #11998e, #38ef7d)"
+                                            <input type="radio" name="ColorOption" id="colorliGreen" className="sr-only" value="linear-gradient(40deg, #11998e, #38ef7d)"
                                                 onClick={(e) => {
                                                     setColor(e.currentTarget.value)
                                                     changecolor()
@@ -461,7 +461,7 @@ function page({ params }: any) {
                                             <h1>Review</h1>
                                         </div>
                                         <div className="charts mt-[20px]">
-                                            {data.map((a:any) => (
+                                            {data.map((a: any) => (
                                                 <form>
 
                                                     {a.kind === "que" ? (
@@ -562,9 +562,9 @@ function page({ params }: any) {
                                                 <div className="flex flex-col rounded-lg border border-gray-100 px-4 py-8 text-center">
                                                     <dt className="order-last text-lg font-medium text-gray-500">Points</dt>
 
-                                                    <dd className="text-4xl font-extrabold text-blue-600 md:text-5xl">{filterquestions2[inde].map((e:any) => {
+                                                    <dd className="text-4xl font-extrabold text-blue-600 md:text-5xl">{filterquestions2[inde].map((e: any) => {
                                                         return e.kind === "que" ? e.points : 0
-                                                    }).reduce((a:number, b:number) => a + b, 0)}
+                                                    }).reduce((a: number, b: number) => a + b, 0)}
                                                     </dd>
                                                 </div>
                                             </dl>
@@ -575,7 +575,7 @@ function page({ params }: any) {
                                     <div className="form ready_for_print mt-[30px]">
                                         {filterquestions2.length > 0 ? (
                                             <>
-                                                {filterquestions2[inde].map((a:any) => (
+                                                {filterquestions2[inde].map((a: any) => (
                                                     <>
                                                         <form>
                                                             {a.kind === "que" ? (
