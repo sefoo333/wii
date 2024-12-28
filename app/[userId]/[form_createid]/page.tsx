@@ -12,7 +12,6 @@ import { deleteDoc, doc, getDoc, onSnapshot, updateDoc } from 'firebase/firestor
 import { auth, db } from '../../_config/confg';
 import Rate from '../../_componants/form_comps/rate';
 import Question from '../../_componants/form_comps/question';
-import Selector from '../../_componants/form_comps/selector';
 import Text_comp from '../../_componants/form_comps/text';
 import Input_comp from '../../_componants/form_comps/input';
 import Link from 'next/link';
