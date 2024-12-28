@@ -138,9 +138,8 @@ function Question(props: { kind: string, id: string, name: string, testmode: boo
         }
 
 
-        return () => {
             getDa()
-        }
+        
     }, [])
 
 
