@@ -5,11 +5,11 @@ import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Toolti
 import { Bar, Line } from 'react-chartjs-2';
 function Baro(props: any) {
     ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
-    const data3 = props.solutions.filter((e) => {
+    const data3 = props.solutions.filter((e:any) => {
         return e.id_Question === props.id
     })
 
-    const tes = data3.reduce((e, a) => {
+    const tes = data3.reduce((e:any, a:any) => {
         const key = a.solution;
         if (!e[key]) {
             e[key] = [];
@@ -34,10 +34,10 @@ function Baro(props: any) {
     }, [])
 
 
-    const numbers = count.map((e) => {
+    const numbers = count.map((e:any) => {
         return e.count
     })
-    const names = count.map((e) => {
+    const names = count.map((e:any) => {
         return e.name
     })
 
