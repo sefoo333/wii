@@ -54,7 +54,7 @@ function Rate_pre_dis(props: { kind: string, id: string, name: string, isrequire
                 <div className="stars">
                     {kind === "star" ? (
                         <div className="stars flex text-[40px] pl-[15px] my-[20px] cursor-pointer">
-                            {Array.from(Array(co), (e, i) => (
+                            {Array.from(Array(parseInt(props.solution)), (e, i) => (
                                 <div className="star" onClick={() => {
                                     console.log(i)
                                     setCo(i + 1)
@@ -72,28 +72,11 @@ function Rate_pre_dis(props: { kind: string, id: string, name: string, isrequire
                                     <FaStar color='rgb(245 158 11 / 1)' />
                                 </div>
                             ))}
-                            {Array.from(Array(count - co), (e, i) => (
-                                <div className="star" data-count={i + 1} onClick={() => {
-                                    console.log(i)
-                                    setCo(i + 1)
-                                    setActive(true)
-                                    let arr = [...valuee]
-                                    arr.push(
-                                        {
-                                            kind: "rate",
-                                            solution: i + 1,
-                                            id: props.id,
-                                        }
-                                    )
-                                    setValue(arr)
-                                }}>
-                                    <CiStar />
-                                </div>
-                            ))}
+                           
                         </div>
                     ) : (
                         <div className="heart flex text-[40px] pl-[15px] my-[20px] cursor-pointer">
-                            {Array.from(Array(count), (e, i) => (
+                            {Array.from(Array(parseInt(props.solution)), (e, i) => (
                                 <CiHeart />
                             ))}
                         </div>
