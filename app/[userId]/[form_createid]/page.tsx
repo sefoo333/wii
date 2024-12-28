@@ -563,7 +563,7 @@ function page({ params }: any) {
                                                 <div className="flex flex-col rounded-lg border border-gray-100 px-4 py-8 text-center">
                                                     <dt className="order-last text-lg font-medium text-gray-500">Points</dt>
 
-                                                    <dd className="text-4xl font-extrabold text-blue-600 md:text-5xl">{filterquestions2[inde].map((e) => {
+                                                    <dd className="text-4xl font-extrabold text-blue-600 md:text-5xl">{filterquestions2[inde].map((e:any) => {
                                                         return e.kind === "que" ? e.points : 0
                                                     }).reduce((a:number, b:number) => a + b, 0)}
                                                     </dd>
