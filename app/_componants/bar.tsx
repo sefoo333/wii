@@ -23,7 +23,7 @@ function Baro(props: any) {
 
     let [count, setCount] = useState([])
     useEffect(() => {
-        let arr = []
+        let arr:any = []
         for (let i = 0; i < values.length; i++) {
             arr.push({
                 name: values[i],
@@ -64,7 +64,7 @@ function Baro(props: any) {
         ],
     };
 
-    const options = {
+    const options:any = {
         responsive: true,
         plugins: {
             legend: { position: "top" },
