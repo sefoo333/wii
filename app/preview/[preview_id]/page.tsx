@@ -12,7 +12,6 @@ import { arrayUnion, doc, getDoc, onSnapshot, setDoc, updateDoc } from 'firebase
 import { db } from '../../_config/confg';
 import Rate from '../../_componants/form_comps/rate';
 import Question from '../../_componants/form_comps/question';
-import Selector from '../../_componants/form_comps/selector';
 import Text_comp from '../../_componants/form_comps/text';
 import Input_comp from '../../_componants/form_comps/input';
 import Question_pre from '@/app/_componants/preview_comps/question';
@@ -29,7 +28,7 @@ const inter = Lato({
 });
 
 
-export let Contex = createContext(null);
+export let Contex: any = createContext(null);
 
 
 
@@ -231,9 +230,9 @@ function page({ params }: any) {
 
 
 
-    let filterpoints = valuee.map((e) => {
+    let filterpoints = valuee.map((e: any) => {
         return e.kind === "que" ? e.points : 0
-    }).reduce((a, b) => a + b, 0)
+    }).reduce((a: number, b: number) => a + b, 0)
 
     return (
 
