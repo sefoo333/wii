@@ -7,7 +7,7 @@ import { CiStar, CiHeart } from "react-icons/ci";
 import { arrayUnion, doc, getDoc, onSnapshot, updateDoc } from 'firebase/firestore';
 import { db } from '@/app/_config/confg';
 
-function Rate(props: { kind: string, id: string, name: string }) {
+function Rate(props: { kind: string, id: string, name: string } | any) {
     let [kind, setKind] = useState("star")
     let [count, setCount] = useState(5);
     let [checked, setCheck] = useState(false)
