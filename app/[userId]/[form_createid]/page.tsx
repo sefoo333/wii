@@ -92,9 +92,8 @@ function page({ params }: any) {
             setId(doc.data().userEditor)
             setTimer(doc.data().Timer)
         })
-        return () => {
             questions()
-        }
+    
     }, [])
 
 
@@ -159,10 +158,9 @@ function page({ params }: any) {
             setQuee2(doc.data().solutions)
         })
 
-        return () => {
             getData();
             questions2()
-        }
+        
     }, [])
 
 
