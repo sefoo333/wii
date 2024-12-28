@@ -1,9 +1,7 @@
 "use client"
 import React, { useContext } from 'react'
-import { Seeea } from '../home/page'
 
 function Search() {
-    let { setSearch }: any = useContext(Seeea)
     return (
         <div className="relative">
             <label htmlFor="Search" className="sr-only"> Search </label>
@@ -11,9 +9,7 @@ function Search() {
             <input
                 type="text"
                 id="Search"
-                onChange={(e) => {
-                    setSearch(e.target.value)
-                }}
+               
                 placeholder="Search for..."
                 className="w-full rounded-md pl-[20px] py-[15px] border-none outline-none focus:border-emerald-500 focus:border-[1px] focus:border-solid border-gray-200 pr-[135px] pe-10 shadow-sm sm:text-sm"
             />
