@@ -24,9 +24,8 @@ function Text_pre(props: any) {
         }
 
 
-        return () => {
             getDa()
-        }
+        
     }, [])
 
 
