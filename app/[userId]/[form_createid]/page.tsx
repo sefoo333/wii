@@ -233,7 +233,7 @@ return () => {
 
     const deletesol = async () => {
         await updateDoc(doc(db, "form_solution", `${params.form_createid}`), {
-            solutions: [],
+            solutions: [[]],
         })
     }
     let [danger, setdanger] = useState(false)
