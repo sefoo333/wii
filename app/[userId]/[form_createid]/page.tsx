@@ -559,7 +559,7 @@ return () => {
                                                     <div className="flex flex-col rounded-lg border border-gray-100 px-4 py-8 text-center">
                                                         <dt className="order-last text-lg font-medium text-gray-500">Time</dt>
 
-                                                        <dd className="text-4xl font-extrabold text-blue-600 md:text-5xl">{quee2[inde].Time}</dd>
+                                                        <dd className="text-4xl font-extrabold text-blue-600 md:text-5xl">{quee2[inde]?.Time}</dd>
                                                     </div>
                                                 </dl>
                                             ) : null}
