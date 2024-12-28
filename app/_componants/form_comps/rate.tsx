@@ -95,9 +95,8 @@ function Rate(props: { kind: string, id: string, name: string } | any) {
             setValue(filter1[0].Title)
         }
 
-        return () => {
             getDa()
-        }
+        
     }, [])
     return (
         <>
