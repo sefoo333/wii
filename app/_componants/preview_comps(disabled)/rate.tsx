@@ -9,7 +9,7 @@ import { db } from '@/app/_config/confg';
 import { FaStar } from "react-icons/fa";
 import { Contex } from '@/app/preview/[preview_id]/page';
 
-function Rate_pre_dis(props: { kind: string, id: string, name: string, isrequired: boolean, title: string }) {
+function Rate_pre_dis(props: { kind: string, id: string, name: string, isrequired: boolean, title: string } | any) {
     let [kind, setKind] = useState("star")
     let [count, setCount] = useState(5);
     let [checked, setCheck] = useState(false)
