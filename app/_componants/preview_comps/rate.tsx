@@ -37,9 +37,8 @@ function Rate_pre(props: { kind: string, id: string, name: string, isrequired: b
             setValue2(filter1[0].Title)
         }
 
-        return () => {
             getDa()
-        }
+        
     }, [])
     let [co, setCo] = useState(0)
     let [active, setActive] = useState(false)
