@@ -303,7 +303,32 @@ function page({ params }: any) {
                             <div className="buttons w-full flex justify-between px-[30px] py-[15px] flex-row-reverse">
 
 
-                                <div className="button mt-[30px] flex justify-end">
+                                <div className="button mt-[30px] flex justify-end"
+onClick={() => {
+let arr = [...valuee];
+                            let filterr = arr.map((e) => {
+                                let ia = e.id;
+                                return e.id !== ia
+                            })
+                            console.log(filterr)
+
+                            if (requ == counter) {
+                                uploadsolution()
+                                setFinal(true)
+                                setTimeon(false)
+                            } else {
+                                const test = enqueueSnackbar('Complete The requeried questions !', {
+                                    variant: 'error',
+                                    persist: true
+                                })
+
+                                setTimeout(() => {
+                                    closeSnackbar(test)
+                                }, 3000)
+                            }
+                        }}
+}}
+>
                                     <a
                                         className="group relative inline-block overflow-hidden border border-indigo-600 px-8 py-3 focus:outline-none focus:ring"
                                         href="#"
