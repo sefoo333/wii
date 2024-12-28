@@ -93,7 +93,7 @@ function Question_pre(props: { kind: string, id: string, name: string, isrequire
                                             }
                                         }
                                     }} type={type} className='w-[20px] h-[20px]  mr-[10px]' name='solution' value="Solution 1" id='so1' />
-                                    <span>{e.name}</span>
+                                    <span className="takeit">{e.name}</span>
                                 </div>
                             </div>
                         ))}
