@@ -162,8 +162,10 @@ return () => {
             setQuee2(doc.data().solutions)
         })
 
-            getData();
+           return () => {
+                getData();
             questions2();
+           }
         
     }, [])
 
