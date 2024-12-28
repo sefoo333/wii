@@ -45,9 +45,8 @@ function Question_pre(props: { kind: string, id: string, name: string, isrequire
         }
 
 
-        return () => {
             getDa()
-        }
+        
 
     }, [])
     const { valuee, setValue }: any = useContext(Contex);
