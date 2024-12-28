@@ -11,7 +11,7 @@ import { Contex } from '@/app/preview/[preview_id]/page';
 import { FaHeart } from "react-icons/fa6";
 
 
-function Rate_pre(props: { kind: string, id: string, name: string, isrequired: boolean }) {
+function Rate_pre(props: { kind: string, id: string, name: string, isrequired: boolean } | any) {
     let [kind, setKind] = useState("star")
     let [count, setCount] = useState(5);
     let [checked, setCheck] = useState(false)
