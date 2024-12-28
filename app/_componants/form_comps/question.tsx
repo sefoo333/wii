@@ -28,7 +28,7 @@ function Question(props: { kind: string, id: string, name: string, testmode: boo
         })
     }
 
-    let [points, setPoints] = useState(0)
+    let [points, setPoints]: any = useState(0)
 
     const changes = async (targ: string, kind?: string | object | boolean | number) => {
         let questions: any = (await getDoc(doc(db, "forms", `${props.name}`))).data()
@@ -146,24 +146,24 @@ function Question(props: { kind: string, id: string, name: string, testmode: boo
 
     const updateObject = (array: object[] | any, id: number, newValues: object) => {
 
-        const checker = array.filter((e) => {
+        const checker = array.filter((e: any) => {
             return e.iscorrect
         })
-        const updatedArray = checker.length == 0 ? array.map(obj =>
+        const updatedArray = checker.length == 0 ? array.map((obj: any) =>
             obj.id === id ? { ...obj, ...newValues } : obj
         ) : array
 
-        updatedArray.sort((a, b) => a.id - b.id);
+        updatedArray.sort((a: any, b: any) => a.id - b.id);
         return updatedArray;
     };
     const updateObject2 = (array: object[] | any, id: number, newValues: object) => {
 
 
-        const updatedArray = array.map(obj =>
+        const updatedArray = array.map((obj: any) =>
             obj.id === id ? { ...obj, ...newValues } : obj
         )
 
-        updatedArray.sort((a, b) => a.id - b.id);
+        updatedArray.sort((a: any, b: any) => a.id - b.id);
         return updatedArray;
     };
 
