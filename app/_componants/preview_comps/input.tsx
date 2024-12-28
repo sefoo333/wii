@@ -24,9 +24,8 @@ function Input_pre(props: any) {
         }
 
 
-        return () => {
             getDa()
-        }
+        
     }, [])
 
     const { valuee, setValue }: any = useContext(Contex);
