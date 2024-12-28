@@ -92,7 +92,10 @@ function page({ params }: any) {
             setId(doc.data().userEditor)
             setTimer(doc.data().Timer)
         })
-            questions()
+
+    document.body.style.background = color
+        
+            questions();
     
     }, [])
 
@@ -119,7 +122,6 @@ function page({ params }: any) {
             background: color
         })
     }
-    document.body.style.background = color
 
 
     const Delete = async () => {
@@ -159,7 +161,7 @@ function page({ params }: any) {
         })
 
             getData();
-            questions2()
+            questions2();
         
     }, [])
 
