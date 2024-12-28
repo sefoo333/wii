@@ -49,9 +49,6 @@ function Question_pre_dis(props: question) {
     }
     useEffect(() => {
         getDa()
-    }, [])
-    useEffect(() => {
-        getDa()
     }, [props.count])
     const [valuee, setValue]: any = useState("");
     let [r, setR] = useState(false)
