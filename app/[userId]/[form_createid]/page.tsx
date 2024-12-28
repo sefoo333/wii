@@ -93,13 +93,13 @@ function page({ params }: any) {
             setTimer(doc.data().Timer)
         })
 
-    document.body.style.background = color
         
 return () => {
             questions()
 
 }    
     }, [])
+    document.body.style.background = color
 
 
     // useEffect(() => {
@@ -162,8 +162,8 @@ return () => {
             setQuee2(doc.data().solutions)
         })
 
-           return () => {
                 getData();
+           return () => {
             questions2();
            }
         
