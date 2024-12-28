@@ -92,7 +92,7 @@ function Rate_pre(props: { kind: string, id: string, name: string, isrequired: b
                                     )
                                     setValue(arr)
                                 }}>
-                                    <CiStar />
+                                    <CiStar color="black" />
                                 </div>
                             ))}
                         </div>
