@@ -576,7 +576,7 @@ function page({ params }: any) {
                                     <div className="form ready_for_print mt-[30px]">
                                         {filterquestions2.length > 0 ? (
                                             <>
-                                                {filterquestions2[inde].map((a) => (
+                                                {filterquestions2[inde].map((a:any) => (
                                                     <>
                                                         <form>
                                                             {a.kind === "que" ? (
