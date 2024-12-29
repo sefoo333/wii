@@ -122,7 +122,7 @@ function Rate(props: { kind: string, id: string, name: string } | any) {
                         </div>
                     )}
                 </div>
-                <div className="two flex my-[25px] pl-[15px]">
+                <div className="two flex my-[25px] pl-[15px] max-md:flex-col">
                     <div className="level">
                         <h1>Levels</h1>
                         <select
