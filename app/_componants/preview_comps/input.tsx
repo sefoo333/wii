@@ -62,7 +62,7 @@ function Input_pre(props: any) {
                         }
                     }
                     setValue(arr)
-                }} name="" className='w-[450px] max-md:w-fit p-[10px] text-[15px]' placeholder="Solution" id=""></textarea>
+                }} name="" className='w-[450px] takeit max-md:w-fit p-[10px] text-[15px]' placeholder="Solution" id=""></textarea>
             </div>
 
 
