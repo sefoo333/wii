@@ -79,7 +79,7 @@ function Input_comp(props: any) {
     return (
         <div className="text flex flex-col my-[15px] px-[15px] " draggable>
             <div className="title mb-[15px]">
-                <input type="text" className='p-[15px] rouded-[15px] w-[400px] border-l-[#798645] border-l-[5px]' placeholder={Title !== "" ? Title : "Title"} onBlur={(e: any) => {
+                <input type="text" className='p-[15px] takeit rouded-[15px] w-[400px] border-l-[#798645] border-l-[5px]' placeholder={Title !== "" ? Title : "Title"} onBlur={(e: any) => {
                     changes("Title", e.target.value)
                 }} />
             </div>
