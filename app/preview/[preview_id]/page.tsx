@@ -309,7 +309,10 @@ function page({ params }: any) {
                                     <a
                                         className="group relative inline-block overflow-hidden border border-indigo-600 px-8 py-3 focus:outline-none focus:ring"
                                         href="#"
-                                        onClick={()=>{
+                                    >
+                                        <input type="submit" value="" className='w-full h-full font-[600] absolute z-10'
+                                            
+                                                               onClick={()=>{
                                             let arr = [...valuee];
                             let filterr = arr.map((e) => {
                                 let ia = e.id;
@@ -332,10 +335,8 @@ function page({ params }: any) {
                                 }, 3000)
                             }
                         }}
-                                        }}
-
-                                    >
-                                        <input type="submit" value="" className='w-full h-full font-[600] absolute z-10' />
+                                        }}                    
+                                            />
                                         <span
                                             className="absolute inset-y-0 left-0 w-[2px] bg-indigo-600 transition-all group-hover:w-full group-active:bg-indigo-500"
                                         ></span>
@@ -439,7 +440,7 @@ function page({ params }: any) {
             </div>
 
             {timerr ? (
-                <div className="timer fixed right-[20px] bottom-[33px]">
+                <div className="timer fixed right-[20px] top-[33px]">
                     <span className="whitespace-nowrap rounded-[10px] bg-purple-100 px-[25px] py-[13px] text-xl text-blue-950">
                         {minute}:{sec}
                     </span>
