@@ -322,7 +322,7 @@ function Question(props: { kind: string, id: string, name: string, testmode: boo
                                         onChange={(e: any) => {
                                             changes("points", parseInt(e.target.value))
                                         }}
-                                        className="h-10 p-[10px] w-24 rounded border-gray-200  sm:text-sm  "
+                                        className="h-10 takeit p-[10px] w-24 rounded border-gray-200  sm:text-sm  "
                                     />
                                 </div>
                             </div>
