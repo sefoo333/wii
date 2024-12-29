@@ -260,28 +260,6 @@ function page({ params }: any) {
 
                         <form action="" id="sss" method="post" onSubmit={(e) => {
                             e.preventDefault();
-            let arr = [...valuee];
-                            let filterr = arr.map((e) => {
-                                let ia = e.id;
-                                return e.id !== ia
-                            })
-                            console.log(filterr)
-
-                            if (requ == counter) {
-                                uploadsolution()
-                                setFinal(true)
-                                setTimeon(false)
-                            } else {
-                                const test = enqueueSnackbar('Complete The requeried questions !', {
-                                    variant: 'error',
-                                    persist: true
-                                })
-
-                                setTimeout(() => {
-                                    closeSnackbar(test)
-                                }, 3000)
-                            
-        }}
                             >
                             <div className="p">
                                 <Contex.Provider value={{ valuee, setValue, requ, setReq }}>
