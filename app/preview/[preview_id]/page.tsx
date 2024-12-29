@@ -283,16 +283,13 @@ function page({ params }: any) {
                             <div className="buttons w-full flex justify-between px-[30px] py-[15px] flex-row-reverse">
 
 
-                                <div className="button mt-[30px] flex justify-end"
->
+                                <div className="button mt-[30px] flex justify-end">
                                     <a
                                         className="group relative inline-block overflow-hidden border border-indigo-600 px-8 py-3 focus:outline-none focus:ring"
-                                        href="#"
-                                    >
+                                        href="#">
                                         <input type="submit" value="" className='w-full h-full font-[600] absolute z-10'
-                                            
-                                                               onClick={()=>{
-                                            let arr = [...valuee];
+                                 onClick={()=>{
+                              let arr = [...valuee];
                             let filterr = arr.map((e) => {
                                 let ia = e.id;
                                 return e.id !== ia
@@ -314,7 +311,7 @@ function page({ params }: any) {
                                 }, 3000)
                             }
                         }}
-                                        }}                    
+                                                         
                                             />
                                         <span
                                             className="absolute inset-y-0 left-0 w-[2px] bg-indigo-600 transition-all group-hover:w-full group-active:bg-indigo-500"
