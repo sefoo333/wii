@@ -283,12 +283,7 @@ function page({ params }: any) {
                             <div className="buttons w-full flex justify-between px-[30px] py-[15px] flex-row-reverse">
 
 
-                                <div className="button mt-[30px] flex justify-end">
-                                    <a
-                                        className="group relative inline-block overflow-hidden border border-indigo-600 px-8 py-3 focus:outline-none focus:ring"
-                                        href="#">
-                                        <input type="submit" value="" className='w-full h-full font-[600] absolute z-10'
-                                 onClick={()=>{
+                                <div className="button mt-[30px] flex justify-end" onClick={()=>{
                               let arr = [...valuee];
                             let filterr = arr.map((e) => {
                                 let ia = e.id;
@@ -310,7 +305,12 @@ function page({ params }: any) {
                                     closeSnackbar(test)
                                 }, 3000)
                             }
-                        }}
+                        }}>
+                                    <a
+                                        className="group relative inline-block overflow-hidden border border-indigo-600 px-8 py-3 focus:outline-none focus:ring"
+                                        href="#">
+                                        <input type="submit" value="" className='w-full h-full font-[600] absolute z-10'
+                             
                                                          
                                             />
                                         <span
