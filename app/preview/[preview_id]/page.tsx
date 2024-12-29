@@ -260,6 +260,7 @@ function page({ params }: any) {
 
                         <form action="" id="sss" method="post" onSubmit={(e) => {
                             e.preventDefault();
+        }}
                             >
                             <div className="p">
                                 <Contex.Provider value={{ valuee, setValue, requ, setReq }}>
