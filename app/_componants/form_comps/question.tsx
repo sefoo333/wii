@@ -206,7 +206,7 @@ function Question(props: { kind: string, id: string, name: string, testmode: boo
                                 <div className="elkbeer flex items-center">
                                     <div className="radio  flex items-center mb-[10px]">
                                         <input type={type} className='w-[20px] h-[20px]  mr-[10px]' name='solution' value="Solution 1" id='so1' />
-                                        <input type="text" placeholder={e.name} className='border-b-[3px] border-b-[#ddd] p-[5px] pb-0' style={e.iscorrect ? { borderBottomColor: "green" } : {}} onChange={(a: any) => {
+                                        <input type="text" placeholder={e.name} className='border-b-[3px] takeit border-b-[#ddd] p-[5px] pb-0' style={e.iscorrect ? { borderBottomColor: "green" } : {}} onChange={(a: any) => {
                                             let ma = solutions.map((ie: any) => {
                                                 if (ie.id === e.id) {
                                                     return {
